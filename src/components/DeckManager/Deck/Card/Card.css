@@ -1,0 +1,30 @@
+.Card {
+    height: 550px;
+    width: inherit;
+    background-color: rgba(97, 101, 102);
+    margin: 0 -10px;
+    text-align: center;
+    border-radius: 5%;
+    border-left: 2px solid black;
+    
+}
+
+.Card0 {
+    margin-top: 0px;
+}
+
+.Card1 {
+    margin-top: 20px;
+}
+
+.Card2 {
+    margin-top: 40px;
+}
+
+.Card3 {
+    margin-top: 60px;
+}
+
+.Card4 {
+    margin-top: 80px;
+}
