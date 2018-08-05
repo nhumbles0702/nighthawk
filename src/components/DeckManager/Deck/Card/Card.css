@@ -1,12 +1,13 @@
 .Card {
-    height: 550px;
-    width: inherit;
+    height: 100%;
+    width: 100%;
     background-color: rgba(97, 101, 102);
-    margin: 0 -10px;
-    text-align: center;
-    border-radius: 5%;
-    border-left: 2px solid black;
-    
+    text-align: left;
+    border-top-left-radius: 5%;
+    border: 2px solid black;
+    border-bottom: none;
+    position: absolute;
+    box-sizing: border-box;    
 }
 
 .Card0 {
@@ -14,17 +15,38 @@
 }
 
 .Card1 {
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-left: 65px;
+    
+    
+    
 }
 
 .Card2 {
-    margin-top: 40px;
+    margin-top: 80px;
+    Margin-left: 130px;
 }
 
 .Card3 {
-    margin-top: 60px;
+    margin-top: 120px;
+    Margin-left: 195px;
 }
 
 .Card4 {
-    margin-top: 80px;
+    margin-top: 160px;
+    Margin-left: 260px;
+}
+
+@media (min-width: 500px) {
+    .Card {
+        position: relative;
+        height: 450px;
+        width: 20%;
+        border-radius: 5%;
+        
+    }
+
+    .Card0, .Card1, .Card2, .Card3, .Card4 {
+        margin: auto 20px;
+    }
 }

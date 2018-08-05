@@ -9,7 +9,7 @@ const card = (props) => {
     let attachedClasses = [classes.Card, classes["Card" + cardPos]]
 
     return (
-        <div className={attachedClasses.join(' ')}>f</div>
+        <div className={attachedClasses.join(' ')} onClick={props.clicked}>E</div>
     )
 }
 

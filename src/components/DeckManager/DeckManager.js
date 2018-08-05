@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Deck from './Deck/Deck';
+import Aux from '../../hoc/Aux2';
 
 class DeckManager extends Component {
 
@@ -60,9 +61,25 @@ class DeckManager extends Component {
 
     }
 
+
+    selectHandler = (pos) => {
+        
+    }
+
     render() {
+
+        
+    const testStyle = {
+        position: 'fixed',
+        bottom: '0',
+        width: '100%'
+    };
         return (
-            <Deck cards={this.state.deck}/>
+            <Aux>
+            {/* Placeholder for modal */}
+            <Deck cards={this.state.deck} clicked={this.selectHandler}/>
+            <div style={testStyle}>Build Controls</div>
+            </Aux>
         )
     }
 }

@@ -8,7 +8,7 @@ import classes from '../Deck/Deck.css';
 const deck = (props) => {
 
     let transformedCards = (props.cards).map((cardHintsArr, i) => {
-        return <Card hints={cardHintsArr} selector={props.cards[i].selected} key={"card" +  i.toString()} pos={i.toString()}/>
+        return <Card hints={cardHintsArr} selector={props.cards[i].selected} key={"card" +  i.toString()} pos={i.toString()} clicked={props.clicked}/>
     })
    
 
