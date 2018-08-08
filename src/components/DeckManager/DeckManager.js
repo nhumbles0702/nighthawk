@@ -15,7 +15,7 @@ class DeckManager extends Component {
                         isTarget: false
                     }
                 ],
-                selected: false
+                selected: true
             },
             {
                 hints: [
@@ -63,7 +63,15 @@ class DeckManager extends Component {
 
 
     selectHandler = (pos) => {
-        
+        return () => {
+            let deck = this.state.deck;
+
+            deck[pos].selected = !deck[pos].selected;
+
+            this.setState({
+                deck: deck
+            });
+        }
     }
 
     render() {
@@ -77,7 +85,7 @@ class DeckManager extends Component {
         return (
             <Aux>
             {/* Placeholder for modal */}
-            <Deck cards={this.state.deck} clicked={this.selectHandler}/>
+            <Deck cards={this.state.deck} clicked={this.selectHandler.bind(this)}/>
             <div style={testStyle}>Build Controls</div>
             </Aux>
         )

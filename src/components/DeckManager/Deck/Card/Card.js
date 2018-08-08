@@ -6,10 +6,17 @@ const card = (props) => {
 
     let cardPos = props.pos
 
-    let attachedClasses = [classes.Card, classes["Card" + cardPos]]
+    let attachedClasses = [
+        classes.Card, 
+        classes["Card" + cardPos]
+    ]
+
+    if (props.selected) {
+        attachedClasses.push(classes['Selected'])
+    }
 
     return (
-        <div className={attachedClasses.join(' ')} onClick={props.clicked}>E</div>
+        <div className={attachedClasses.join(' ')} onClick={props.clicked(cardPos)}></div>
     )
 }
 
