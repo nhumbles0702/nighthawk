@@ -13,10 +13,6 @@
     animation-delay: 0;
     animation-iteration-count: 1;
     animation-name: slideInFromRight;
-}
-
-.Selected {
-    border: 5px solid yellow;
     
 }
 
@@ -54,7 +50,13 @@
         height: 450px;
         width: 20%;
         border-radius: 5%;
+        transition: transform 0.5s ease;
+        border: 5px solid black;
         
+    }
+
+    .Card:hover {
+        transform: translateY(-25px);
     }
 
     .Card0, .Card1, .Card2, .Card3, .Card4 {
@@ -69,4 +71,18 @@
     100% {
         transform: translateX(0);
     }
+}
+
+@keyframes hovering {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100px);
+    }
+}
+
+.Selected {
+    border: 5px solid yellow;
+    
 }
